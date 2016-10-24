@@ -1,0 +1,29 @@
+{
+  "name": "nightwatch-browserstack",
+  "version": "0.0.0",
+  "title": "Nightwatch.js BrowserStack status update",
+  "description": "Update BrowserStack session status based on Nightwatch.js test results.",
+  "keywords": [
+    "nightwatch",
+    "browserstack",
+    "status",
+    "test"
+  ],
+  "homepage": "https://github.com/blueimp/nightwatch-browserstack",
+  "author": {
+    "name": "Sebastian Tschan",
+    "url": "https://blueimp.net"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/blueimp/nightwatch-browserstack.git"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "scripts": {
+    "postversion": "git push --tags origin HEAD && npm publish"
+  },
+  "main": "index.js"
+}
