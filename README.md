@@ -13,13 +13,13 @@ npm install nightwatch-browserstack
 ```js
 module.exports = {
   beforeEach: function (browser, done) {
-    if (this.test_settings.selenium_host === 'hub.browserstack.com') {
+    if (this.test_settings.selenium_host === 'hub-cloud.browserstack.com') {
       return require('nightwatch-browserstack').storeSessionId(browser, done)
     }
     done()
   },
   afterEach: function (browser, done) {
-    if (this.test_settings.selenium_host === 'hub.browserstack.com') {
+    if (this.test_settings.selenium_host === 'hub-cloud.browserstack.com') {
       return require('nightwatch-browserstack').updateStatus(browser, done)
     }
     done()
