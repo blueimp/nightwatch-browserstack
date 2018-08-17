@@ -18,9 +18,9 @@ module.exports = {
     })
   },
   updateStatus: function (browser, done) {
-    if (browser.currentTest.results.failed) {
+    if (browser.currentTest.results.failed || browser.currentTest.results.errors) {
       let caps = browser.globals.test_settings.desiredCapabilities
-      let user = caps['browserstack.user']
+      let user = browser.globals.test_settings.desiredCapabilities.browser.user;
       let key = caps['browserstack.key']
       let options = {
         host: 'www.browserstack.com',
