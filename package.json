@@ -1,6 +1,6 @@
 {
   "name": "nightwatch-browserstack",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "title": "Nightwatch.js BrowserStack status update",
   "description": "Update BrowserStack session status based on Nightwatch.js test results.",
   "keywords": [
