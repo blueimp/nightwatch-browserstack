@@ -18,11 +18,11 @@ module.exports = {
     })
   },
   updateStatus: function (browser, done) {
-    if (browser.currentTest.results.failed) {
-      let caps = browser.globals.test_settings.desiredCapabilities
-      let user = caps['browserstack.user']
-      let key = caps['browserstack.key']
-      let options = {
+    if (browser.currentTest.results.failed || browser.currentTest.results.errors) {
+      const caps = browser.globals.test_settings.desiredCapabilities
+      const user = caps['browserstack.user']
+      const key = caps['browserstack.key']
+      const options = {
         host: 'www.browserstack.com',
         path: `/automate/sessions/${browser.browserStackSessionId}.json`,
         method: 'PUT',
