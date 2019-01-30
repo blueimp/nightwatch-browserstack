@@ -19,7 +19,7 @@ module.exports = {
   },
   updateStatus: function (browser, done) {
     if (browser.currentTest.results.failed || browser.currentTest.results.errors) {
-      const caps = browser.globals.test_settings.desiredCapabilities
+      const caps = browser.options.desiredCapabilities
       const user = caps['browserstack.user']
       const key = caps['browserstack.key']
       const options = {
